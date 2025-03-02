@@ -7,7 +7,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lk.ijse.megacitycab.config.FactoryConfiguration;
 import lk.ijse.megacitycab.dto.CustomerDTO;
+import lk.ijse.megacitycab.entity.Customer;
+import lk.ijse.megacitycab.service.CustomerService;
+import lk.ijse.megacitycab.service.CustomerServiceImpl;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,12 +22,14 @@ import java.io.PrintWriter;
 public class CutomerController extends HttpServlet {
 
     private Jsonb jsonb = JsonbBuilder.create();
+    private CustomerService customerService = new CustomerServiceImpl();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try(PrintWriter printWriter = resp.getWriter()){
             CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
-            printWriter.println(jsonb.toJson(customer));
+            customerService.saveCustomer(customer);
+            resp.setStatus(HttpServletResponse.SC_CREATED);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -29,17 +37,31 @@ public class CutomerController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
+        try{
+            CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
+            customerService.saveCustomer(customer);
+            resp.setStatus(HttpServletResponse.SC_CREATED);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        try(PrintWriter printWriter = resp.getWriter()){
+            CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
+            printWriter.println(jsonb.toJson(customer));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+        String customerId = req.getParameter("customerId");
+
     }
 }
