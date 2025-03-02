@@ -10,5 +10,5 @@ public interface CustomerService {
     List<CustomerDTO> getAllCustomer() throws IOException;
     void updateCustomer(CustomerDTO customer) throws IOException;
     void deleteCustomer(String registration_number) throws IOException;
-    CustomerDTO findCustomer(String registration_number);
+    CustomerDTO findCustomer(String registration_number) throws IOException;
 }

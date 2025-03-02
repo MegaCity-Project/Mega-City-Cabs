@@ -11,5 +11,5 @@ public interface CustomerRepotory {
     List<Customer> getAllCustomer() throws IOException;
     void updateCustomer(Customer customer) throws IOException;
     void deleteCustomer(String registration_number) throws IOException;
-    Customer findCustomer(String registration_number);
+    Customer findCustomer(String registration_number) throws IOException;
 }

@@ -49,7 +49,10 @@ public class CustomerRepotoryImpl implements CustomerRepotory {
     }
 
     @Override
-    public Customer findCustomer(String registration_number) {
-        return null;
+    public Customer findCustomer(String registration_number) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Customer customer = session.get(Customer.class,registration_number);
+        session.close();
+        return customer;
     }
 }

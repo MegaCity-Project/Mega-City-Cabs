@@ -33,7 +33,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public CustomerDTO findCustomer(String registration_number) {
-        return null;
+    public CustomerDTO findCustomer(String registration_number) throws IOException {
+        return map.toCustomerDto(customerRepotory.findCustomer(registration_number));
     }
 }

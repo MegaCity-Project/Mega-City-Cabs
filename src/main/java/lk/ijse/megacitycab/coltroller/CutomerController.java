@@ -27,7 +27,15 @@ public class CutomerController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try(PrintWriter printWriter = resp.getWriter()){
-            printWriter.println(jsonb.toJson(customerService.getAllCustomer()));
+
+            String customerId = req.getParameter("registration_number");
+
+            if(customerId==null){
+                printWriter.println(jsonb.toJson(customerService.getAllCustomer()));
+            }else{
+                printWriter.println(jsonb.toJson(customerService.findCustomer(customerId)));
+            }
+
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
