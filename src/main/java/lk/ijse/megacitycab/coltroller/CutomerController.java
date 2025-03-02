@@ -49,10 +49,12 @@ public class CutomerController extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try(PrintWriter printWriter = resp.getWriter()){
+        try{
             CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
-            printWriter.println(jsonb.toJson(customer));
+            resp.setStatus(HttpServletResponse.SC_OK);
+            customerService.updateCustomer(customer);
         }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             e.printStackTrace();
         }
     }

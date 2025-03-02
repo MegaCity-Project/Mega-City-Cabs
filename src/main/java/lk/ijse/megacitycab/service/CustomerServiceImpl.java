@@ -23,8 +23,8 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public void updateCustomer(CustomerDTO customer) {
-
+    public void updateCustomer(CustomerDTO customer) throws IOException {
+        customerRepotory.updateCustomer(map.toCustomer(customer));
     }
 
     @Override
