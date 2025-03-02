@@ -18,8 +18,8 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public List<CustomerDTO> getAllCustomer() {
-        return null;
+    public List<CustomerDTO> getAllCustomer() throws IOException {
+        return map.toCustomerDtoList(customerRepotory.getAllCustomer());
     }
 
     @Override

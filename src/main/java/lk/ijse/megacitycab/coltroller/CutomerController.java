@@ -27,11 +27,9 @@ public class CutomerController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try(PrintWriter printWriter = resp.getWriter()){
-            CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
-            customerService.saveCustomer(customer);
-            resp.setStatus(HttpServletResponse.SC_CREATED);
+            printWriter.println(jsonb.toJson(customerService.getAllCustomer()));
         }catch (Exception e){
-            e.printStackTrace();
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
 
     }

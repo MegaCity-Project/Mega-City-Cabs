@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CustomerRepotory {
     void saveCustomer(Customer customer) throws IOException;
-    List<Customer> getAllCustomer();
+    List<Customer> getAllCustomer() throws IOException;
     void updateCustomer(Customer customer);
     void deleteCustomer(Customer customer);
     Customer findCustomer(String registration_number);

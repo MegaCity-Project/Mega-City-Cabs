@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CustomerService {
     void saveCustomer(CustomerDTO customer) throws IOException;
-    List<CustomerDTO> getAllCustomer();
+    List<CustomerDTO> getAllCustomer() throws IOException;
     void updateCustomer(CustomerDTO customer);
     void deleteCustomer(CustomerDTO customer);
     CustomerDTO findCustomer(String registration_number);
