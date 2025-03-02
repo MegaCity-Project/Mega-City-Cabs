@@ -28,8 +28,8 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public void deleteCustomer(CustomerDTO customer) {
-
+    public void deleteCustomer(String registration_number) throws IOException {
+        customerRepotory.deleteCustomer(registration_number);
     }
 
     @Override

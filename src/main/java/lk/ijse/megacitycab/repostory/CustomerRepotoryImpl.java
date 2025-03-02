@@ -39,8 +39,13 @@ public class CustomerRepotoryImpl implements CustomerRepotory {
     }
 
     @Override
-    public void deleteCustomer(Customer customer) {
-
+    public void deleteCustomer(String registration_number) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Customer customer = session.get(Customer.class,registration_number);
+        session.remove(customer);
+        transaction.commit();
+        session.close();
     }
 
     @Override

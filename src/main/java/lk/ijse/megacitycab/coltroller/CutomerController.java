@@ -51,8 +51,8 @@ public class CutomerController extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try{
             CustomerDTO customer = jsonb.fromJson(req.getReader(), CustomerDTO.class);
-            resp.setStatus(HttpServletResponse.SC_OK);
             customerService.updateCustomer(customer);
+            resp.setStatus(HttpServletResponse.SC_OK);
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             e.printStackTrace();
@@ -61,7 +61,14 @@ public class CutomerController extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String customerId = req.getParameter("customerId");
+        try{
+            String customerId = req.getParameter("registration_number");
+            customerService.deleteCustomer(customerId);
+            resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            e.printStackTrace();
+        }
 
     }
 }
