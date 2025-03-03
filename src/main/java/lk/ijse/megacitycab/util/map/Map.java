@@ -1,4 +1,4 @@
-package lk.ijse.megacitycab.map;
+package lk.ijse.megacitycab.util.map;
 
 import lk.ijse.megacitycab.dto.CustomerDTO;
 import lk.ijse.megacitycab.entity.Customer;

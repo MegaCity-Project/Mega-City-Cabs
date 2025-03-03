@@ -12,8 +12,8 @@ import lk.ijse.megacitycab.dto.CustomerDTO;
 import lk.ijse.megacitycab.entity.Customer;
 import lk.ijse.megacitycab.service.CustomerService;
 import lk.ijse.megacitycab.service.CustomerServiceImpl;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,6 +23,7 @@ public class CutomerController extends HttpServlet {
 
     private Jsonb jsonb = JsonbBuilder.create();
     private CustomerService customerService = new CustomerServiceImpl();
+    private static final Logger logger = LoggerFactory.getLogger(CutomerController.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -38,6 +39,8 @@ public class CutomerController extends HttpServlet {
 
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+            e.printStackTrace();
         }
 
     }
@@ -50,7 +53,7 @@ public class CutomerController extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_CREATED);
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
 
     }

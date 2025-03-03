@@ -1,0 +1,134 @@
+20:34:29.417 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:34:29.909 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:34:31.447 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1062, SQLState: 23000
+
+20:34:31.447 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Duplicate entry 'CUST12346' for key 'customer.PRIMARY'
+
+20:34:31.456 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Duplicate entry 'CUST12346' for key 'customer.PRIMARY'] [insert into Customer (address,email,name,phone,registration_number) values (?,?,?,?,?)]
+
+20:44:30.273 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:44:30.721 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:44:32.310 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1062, SQLState: 23000
+
+20:44:32.311 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Duplicate entry 'CUST12346' for key 'customer.PRIMARY'
+
+20:44:32.324 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Duplicate entry 'CUST12346' for key 'customer.PRIMARY'] [insert into Customer (address,email,name,phone,registration_number) values (?,?,?,?,?)]
+
+23:10:29.327 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:10:30.029 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:10:30.373 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:10:35.336 [http-nio-8080-exec-3] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:10:35.356 [http-nio-8080-exec-3] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:10:35.370 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:16.537 [http-nio-8080-exec-6] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:16.552 [http-nio-8080-exec-6] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:16.570 [http-nio-8080-exec-6] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:35.880 [http-nio-8080-exec-7] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:35.894 [http-nio-8080-exec-7] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:35.902 [http-nio-8080-exec-7] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:37.157 [http-nio-8080-exec-9] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:37.169 [http-nio-8080-exec-9] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:37.180 [http-nio-8080-exec-9] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:38.045 [http-nio-8080-exec-8] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:38.058 [http-nio-8080-exec-8] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:38.067 [http-nio-8080-exec-8] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:38.919 [http-nio-8080-exec-10] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:38.933 [http-nio-8080-exec-10] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:38.943 [http-nio-8080-exec-10] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:42.566 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:42.577 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:42.586 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:43.765 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:43.776 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:43.784 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:47.644 [http-nio-8080-exec-3] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:47.658 [http-nio-8080-exec-3] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:47.669 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:48.802 [http-nio-8080-exec-5] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:48.811 [http-nio-8080-exec-5] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:48.822 [http-nio-8080-exec-5] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:11:53.015 [http-nio-8080-exec-7] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:11:53.027 [http-nio-8080-exec-7] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:11:53.035 [http-nio-8080-exec-7] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:13:31.089 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:13:31.555 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:13:31.857 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:15:17.364 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:15:17.854 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:15:18.171 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:15:25.172 [http-nio-8080-exec-4] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:15:25.194 [http-nio-8080-exec-4] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:15:25.212 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:16:52.269 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:16:52.659 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:16:52.898 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:21:29.469 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:21:30.075 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:21:30.393 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:21:53.235 [http-nio-8080-exec-4] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:21:53.263 [http-nio-8080-exec-4] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:21:53.276 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+
+23:23:53.071 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:23:53.627 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+23:23:53.994 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
+

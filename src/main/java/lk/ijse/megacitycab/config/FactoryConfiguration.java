@@ -1,6 +1,6 @@
 package lk.ijse.megacitycab.config;
 
-import lk.ijse.megacitycab.entity.Customer;
+import lk.ijse.megacitycab.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,6 +18,10 @@ public class FactoryConfiguration {
         properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernate.properties"));
         configuration.setProperties(properties);
         configuration.addAnnotatedClass(Customer.class);
+        configuration.addAnnotatedClass(Booking.class);
+        configuration.addAnnotatedClass(Driver.class);
+        configuration.addAnnotatedClass(Vehicle.class);
+        configuration.addAnnotatedClass(VehicleDetails.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

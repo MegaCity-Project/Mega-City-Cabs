@@ -1,7 +1,7 @@
 package lk.ijse.megacitycab.service;
 
 import lk.ijse.megacitycab.dto.CustomerDTO;
-import lk.ijse.megacitycab.map.Map;
+import lk.ijse.megacitycab.util.map.Map;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
 import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
 
