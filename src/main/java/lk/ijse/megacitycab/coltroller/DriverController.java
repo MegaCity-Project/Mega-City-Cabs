@@ -47,7 +47,14 @@ public class DriverController extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        try{
+            DriverDTO driver = jsonb.fromJson(req.getReader(), DriverDTO.class);
+            driverService.updateDriver(driver);
+            resp.setStatus(HttpServletResponse.SC_OK);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

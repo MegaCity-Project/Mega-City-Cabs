@@ -23,7 +23,7 @@ public class DriverSerivceImpl implements DriverService{
 
     @Override
     public void updateDriver(DriverDTO driver) throws IOException {
-
+        driverRepostory.updateDriver(map.toDriver(driver));
     }
 
     @Override

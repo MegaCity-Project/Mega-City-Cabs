@@ -32,7 +32,11 @@ public class DriverRepotoryImpl implements DriverRepostory{
 
     @Override
     public void updateDriver(Driver driver) throws IOException {
-
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(driver);
+        transaction.commit();
+        session.close();
     }
 
     @Override
