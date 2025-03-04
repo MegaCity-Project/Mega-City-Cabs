@@ -1,9 +1,11 @@
 package lk.ijse.megacitycab.repostory;
 
 import lk.ijse.megacitycab.config.FactoryConfiguration;
+import lk.ijse.megacitycab.entity.Customer;
 import lk.ijse.megacitycab.entity.Driver;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,7 +22,12 @@ public class DriverRepotoryImpl implements DriverRepostory{
 
     @Override
     public List<Driver> getAllDriver() throws IOException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        NativeQuery nativeQuery = session.createNativeQuery("SELECT * FROM driver");
+        nativeQuery.addEntity(Driver.class);
+        List<Driver> drivers = nativeQuery.getResultList();
+        session.close();
+        return drivers;
     }
 
     @Override

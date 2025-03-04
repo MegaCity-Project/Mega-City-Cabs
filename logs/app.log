@@ -184,3 +184,21 @@
 
 15:46:29.108 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Identifier of entity 'lk.ijse.megacitycab.entity.Driver' must be manually assigned before calling 'persist()'
 
+15:48:41.856 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+15:48:42.343 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+15:54:23.451 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+15:54:23.951 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+15:54:25.749 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 0, SQLState: S0022
+
+15:54:25.750 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Column 'registration_number' not found.
+
+15:54:25.760 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Unable to find column position by name: registration_number [Column 'registration_number' not found.] [n/a]
+
+15:55:22.572 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+15:55:22.866 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+

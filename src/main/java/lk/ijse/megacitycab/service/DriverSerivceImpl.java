@@ -18,7 +18,7 @@ public class DriverSerivceImpl implements DriverService{
 
     @Override
     public List<DriverDTO> getAllDriver() throws IOException {
-        return null;
+        return map.toDriverDtoList(driverRepostory.getAllDriver());
     }
 
     @Override
