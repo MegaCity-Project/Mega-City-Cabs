@@ -266,3 +266,53 @@
 
 18:24:01.277 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 
+18:26:46.258 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:26:46.742 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:30:36.793 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:30:37.270 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:30:43.842 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:30:46.512 [http-nio-8080-exec-5] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:31:29.768 [http-nio-8080-exec-7] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:33:40.372 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:33:40.913 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:33:42.712 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:34:00.537 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:34:01.057 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:34:03.016 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:38:34.192 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:38:34.660 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:38:36.359 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+18:39:09.619 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:39:10.128 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:39:11.894 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+19:08:38.487 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:08:39.017 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:08:40.868 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+
+19:09:26.478 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:09:27.037 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:09:28.933 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
+

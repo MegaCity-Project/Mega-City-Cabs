@@ -28,7 +28,7 @@ public class VehicleServiceImpl implements VehicleService{
 
     @Override
     public void deleteVehicle(String vehicle_id) throws IOException {
-
+        vehicleRepostory.deleteVehicle(vehicle_id);
     }
 
     @Override

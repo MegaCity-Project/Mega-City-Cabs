@@ -1,6 +1,7 @@
 package lk.ijse.megacitycab.repostory;
 
 import lk.ijse.megacitycab.config.FactoryConfiguration;
+import lk.ijse.megacitycab.entity.Driver;
 import lk.ijse.megacitycab.entity.Vehicle;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -40,7 +41,13 @@ public class VehicleRepostoryImpl implements VehicleRepostory{
 
     @Override
     public void deleteVehicle(String vehicle_id) throws IOException {
-
+        System.out.println(vehicle_id);
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Vehicle vehicle = session.get(Vehicle.class,vehicle_id);
+        session.remove(vehicle);
+        transaction.commit();
+        session.close();
     }
 
     @Override

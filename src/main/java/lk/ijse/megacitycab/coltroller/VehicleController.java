@@ -61,6 +61,13 @@ public class VehicleController extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+        try{
+            String vehicle_id = req.getParameter("vehicle_id");
+            vehicleService.deleteVehicle(vehicle_id);
+            resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 }
