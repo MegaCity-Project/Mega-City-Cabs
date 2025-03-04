@@ -24,7 +24,7 @@ public class BoockingServiceImpl implements BoockingService{
 
     @Override
     public void updateBoocking(BoockingDTO boocking) throws IOException {
-
+        boockingRepostory.updateBoocking(map.toBoocking(boocking));
     }
 
     @Override

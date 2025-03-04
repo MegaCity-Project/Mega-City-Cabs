@@ -32,7 +32,11 @@ public class BoockingRepostoryImpl implements BoockingRepostory{
 
     @Override
     public void updateBoocking(Booking booking) throws IOException {
-
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(booking);
+        transaction.commit();
+        session.close();
     }
 
     @Override
