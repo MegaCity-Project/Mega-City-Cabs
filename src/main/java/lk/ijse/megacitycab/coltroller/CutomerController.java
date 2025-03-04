@@ -40,7 +40,6 @@ public class CutomerController extends HttpServlet {
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.error(e.getMessage());
-            e.printStackTrace();
         }
 
     }
@@ -66,7 +65,7 @@ public class CutomerController extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_OK);
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 
@@ -78,7 +77,7 @@ public class CutomerController extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
 
     }

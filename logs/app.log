@@ -132,3 +132,21 @@
 
 23:23:53.994 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Customer.bookings' targets the type 'lk.ijse.megacitycab.entity.Booking' which is not an '@Entity' type
 
+23:24:47.706 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+23:24:48.235 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+11:54:32.871 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Internal error: Invalid token=EOF at (line no=1, column no=0, offset=-1). Expected tokens are: [CURLYOPEN, SQUAREOPEN, STRING, NUMBER, TRUE, FALSE, NULL]
+
+11:55:05.203 [http-nio-8080-exec-4] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+11:55:05.822 [http-nio-8080-exec-4] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+12:00:04.764 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+12:00:05.266 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+12:00:07.168 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- not-null property references a null or transient value : lk.ijse.megacitycab.entity.Booking.customer
+
+12:00:21.850 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- not-null property references a null or transient value : lk.ijse.megacitycab.entity.Booking.customer
+
