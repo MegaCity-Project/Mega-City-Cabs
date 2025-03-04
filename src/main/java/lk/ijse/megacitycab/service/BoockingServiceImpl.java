@@ -34,6 +34,6 @@ public class BoockingServiceImpl implements BoockingService{
 
     @Override
     public BoockingDTO findBoocking(String booking_id) throws IOException {
-        return null;
+        return map.toBoockingDto(boockingRepostory.findBoocking(booking_id));
     }
 }
