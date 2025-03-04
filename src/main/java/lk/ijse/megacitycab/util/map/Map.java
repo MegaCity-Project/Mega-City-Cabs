@@ -2,8 +2,10 @@ package lk.ijse.megacitycab.util.map;
 
 import lk.ijse.megacitycab.dto.BoockingDTO;
 import lk.ijse.megacitycab.dto.CustomerDTO;
+import lk.ijse.megacitycab.dto.DriverDTO;
 import lk.ijse.megacitycab.entity.Booking;
 import lk.ijse.megacitycab.entity.Customer;
+import lk.ijse.megacitycab.entity.Driver;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
 import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
 import org.modelmapper.ModelMapper;
@@ -50,6 +52,20 @@ public class Map {
             boockingDTOS.add(toBoockingDto(booking));
         }
         return boockingDTOS;
+    }
+
+    public DriverDTO toDriverDto(Driver driver){
+        return modelMapper.map(driver, DriverDTO.class);
+    }
+
+    public Driver toDriver(DriverDTO driver){
+        return modelMapper.map(driver, Driver.class);
+    }
+
+    public List<DriverDTO> toDriverDtoList(List<Driver> driverList) {
+        return driverList.stream()
+                .map(driver -> modelMapper.map(driver, DriverDTO.class))
+                .collect(Collectors.toList());
     }
 
 

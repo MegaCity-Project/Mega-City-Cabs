@@ -172,3 +172,15 @@
 
 13:33:50.609 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- attempt to create delete event with null entity
 
+13:38:09.178 [http-nio-8080-exec-9] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+13:38:09.410 [http-nio-8080-exec-9] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+13:38:21.598 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.entity.Booking.getCustomer()" because "booking" is null
+
+15:46:26.886 [http-nio-8080-exec-3] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+15:46:27.415 [http-nio-8080-exec-3] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+15:46:29.108 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Identifier of entity 'lk.ijse.megacitycab.entity.Driver' must be manually assigned before calling 'persist()'
+
