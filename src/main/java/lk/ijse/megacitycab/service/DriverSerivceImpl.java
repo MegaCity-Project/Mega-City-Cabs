@@ -33,6 +33,6 @@ public class DriverSerivceImpl implements DriverService{
 
     @Override
     public DriverDTO findDriver(String driver_id) throws IOException {
-        return null;
+        return map.toDriverDto(driverRepostory.findDriver(driver_id));
     }
 }

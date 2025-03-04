@@ -51,6 +51,9 @@ public class DriverRepotoryImpl implements DriverRepostory{
 
     @Override
     public Driver findDriver(String driver_id) throws IOException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Driver driver = session.get(Driver.class,driver_id);
+        session.close();
+        return driver;
     }
 }

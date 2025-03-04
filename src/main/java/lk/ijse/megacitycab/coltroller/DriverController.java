@@ -38,7 +38,13 @@ public class DriverController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try(PrintWriter printWriter = resp.getWriter()){
-            printWriter.write(jsonb.toJson(driverService.getAllDriver()));
+            String driver_id = req.getParameter("driver_id");
+            if(driver_id == null){
+                printWriter.write(jsonb.toJson(driverService.getAllDriver()));
+            }else {
+                printWriter.write(jsonb.toJson(driverService.findDriver(driver_id)));
+            }
+
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.error(e.getMessage());
