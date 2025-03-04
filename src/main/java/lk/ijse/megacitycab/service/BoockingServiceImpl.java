@@ -29,7 +29,7 @@ public class BoockingServiceImpl implements BoockingService{
 
     @Override
     public void deleteBoocking(String booking_id) throws IOException {
-
+        boockingRepostory.deleteBoocking(booking_id);
     }
 
     @Override

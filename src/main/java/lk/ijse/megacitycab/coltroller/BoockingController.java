@@ -58,6 +58,13 @@ public class BoockingController extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+        try {
+            String booking_id = req.getParameter("booking_id");
+            boockingService.deleteBoocking(booking_id);
+            resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 }

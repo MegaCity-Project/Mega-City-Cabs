@@ -41,7 +41,12 @@ public class BoockingRepostoryImpl implements BoockingRepostory{
 
     @Override
     public void deleteBoocking(String booking_id) throws IOException {
-
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Booking booking = session.get(Booking.class,booking_id);
+        session.remove(booking);
+        transaction.commit();
+        session.close();
     }
 
     @Override
