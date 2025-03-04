@@ -18,7 +18,7 @@ public class VehicleServiceImpl implements VehicleService{
 
     @Override
     public List<VehicleDTO> getAllVehicle() throws IOException {
-        return null;
+        return map.toVehicleDtoList(vehicleRepostory.getAllVehicle());
     }
 
     @Override

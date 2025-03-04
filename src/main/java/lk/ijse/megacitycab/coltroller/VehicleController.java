@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.Writer;
 
 @WebServlet(urlPatterns = "/vehicle")
 public class VehicleController extends HttpServlet {
@@ -26,7 +27,12 @@ public class VehicleController extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(CutomerController.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        try(Writer writer = resp.getWriter()){
+            writer.write(jsonb.toJson(vehicleService.getAllVehicle()));
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

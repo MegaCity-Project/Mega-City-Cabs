@@ -220,3 +220,45 @@
 
 16:07:34.372 [http-nio-8080-exec-5] ERROR l.i.m.coltroller.CutomerController -- source cannot be null
 
+18:14:04.290 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:14:04.714 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:14:20.960 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1062, SQLState: 23000
+
+18:14:20.960 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Duplicate entry 'V001' for key 'vehicle.PRIMARY'
+
+18:14:20.971 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Duplicate entry 'V001' for key 'vehicle.PRIMARY'] [insert into Vehicle (brand,color,driver_driverId,fuelType,licanePlateNumber,pricePreMilage,vehicleId) values (?,?,?,?,?,?,?)]
+
+18:21:47.150 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.config.FactoryConfiguration.getSession()" because "lk.ijse.megacitycab.config.FactoryConfiguration.factoryConfiguration" is null
+
+18:21:50.014 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.config.FactoryConfiguration.getSession()" because "lk.ijse.megacitycab.config.FactoryConfiguration.factoryConfiguration" is null
+
+18:23:09.172 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+18:23:09.708 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+18:23:11.501 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1146, SQLState: 42S02
+
+18:23:11.501 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Table 'mega-city.vehocle' doesn't exist
+
+18:23:11.515 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- JDBC exception executing SQL [SELECT * FROM vehocle] [Table 'mega-city.vehocle' doesn't exist] [n/a]
+
+18:23:13.651 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1146, SQLState: 42S02
+
+18:23:13.651 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Table 'mega-city.vehocle' doesn't exist
+
+18:23:13.653 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- JDBC exception executing SQL [SELECT * FROM vehocle] [Table 'mega-city.vehocle' doesn't exist] [n/a]
+
+18:23:17.563 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1062, SQLState: 23000
+
+18:23:17.563 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Duplicate entry 'V001' for key 'vehicle.PRIMARY'
+
+18:23:17.566 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Duplicate entry 'V001' for key 'vehicle.PRIMARY'] [insert into Vehicle (brand,color,driver_driverId,fuelType,licanePlateNumber,pricePreMilage,vehicleId) values (?,?,?,?,?,?,?)]
+
+18:23:25.059 [http-nio-8080-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1146, SQLState: 42S02
+
+18:23:25.059 [http-nio-8080-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Table 'mega-city.vehocle' doesn't exist
+
+18:23:25.060 [http-nio-8080-exec-7] ERROR l.i.m.coltroller.CutomerController -- JDBC exception executing SQL [SELECT * FROM vehocle] [Table 'mega-city.vehocle' doesn't exist] [n/a]
+

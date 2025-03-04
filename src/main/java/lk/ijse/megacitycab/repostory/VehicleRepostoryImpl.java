@@ -4,6 +4,7 @@ import lk.ijse.megacitycab.config.FactoryConfiguration;
 import lk.ijse.megacitycab.entity.Vehicle;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 public class VehicleRepostoryImpl implements VehicleRepostory{
     @Override
     public void saveVehicle(Vehicle vehicle) throws IOException {
-        Session session = FactoryConfiguration.factoryConfiguration.getSession();
+        Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(vehicle);
         transaction.commit();
@@ -20,7 +21,12 @@ public class VehicleRepostoryImpl implements VehicleRepostory{
 
     @Override
     public List<Vehicle> getAllVehicle() throws IOException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        NativeQuery nativeQuery = session.createNativeQuery("SELECT * FROM vehicle");
+        nativeQuery.addEntity(Vehicle.class);
+        List<Vehicle> resultList = nativeQuery.getResultList();
+        session.close();
+        return resultList;
     }
 
     @Override
