@@ -9,6 +9,7 @@ import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
 import org.modelmapper.ModelMapper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,10 +44,12 @@ public class Map {
         return booking;
     }
 
-    public List<BoockingDTO> toBoockingDtiList(List<Booking> bookings){
-        return bookings.stream()
-                .map(booking -> modelMapper.map(booking, BoockingDTO.class))
-                .collect(Collectors.toList());
+    public List<BoockingDTO> toBoockingDtoList(List<Booking> bookings){
+        List<BoockingDTO> boockingDTOS = new ArrayList<>();
+        for (Booking booking : bookings){
+            boockingDTOS.add(toBoockingDto(booking));
+        }
+        return boockingDTOS;
     }
 
 

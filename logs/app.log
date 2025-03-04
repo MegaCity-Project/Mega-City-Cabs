@@ -150,3 +150,7 @@
 
 12:00:21.850 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- not-null property references a null or transient value : lk.ijse.megacitycab.entity.Booking.customer
 
+12:09:21.421 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+12:09:21.985 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+

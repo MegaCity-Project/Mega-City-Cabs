@@ -19,7 +19,7 @@ public class BoockingServiceImpl implements BoockingService{
 
     @Override
     public List<BoockingDTO> getAllBoocking() throws IOException {
-        return null;
+        return map.toBoockingDtoList(boockingRepostory.getAllBoocking());
     }
 
     @Override

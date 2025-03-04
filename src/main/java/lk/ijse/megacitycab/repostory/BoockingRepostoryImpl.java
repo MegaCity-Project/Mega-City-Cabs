@@ -5,6 +5,7 @@ import lk.ijse.megacitycab.entity.Booking;
 import lk.ijse.megacitycab.entity.Customer;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 
 import java.io.IOException;
 import java.util.List;
@@ -21,7 +22,12 @@ public class BoockingRepostoryImpl implements BoockingRepostory{
 
     @Override
     public List<Booking> getAllBoocking() throws IOException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        NativeQuery nativeQuery = session.createNativeQuery("SELECT * FROM booking");
+        nativeQuery.addEntity(Booking.class);
+        List<Booking> bookings = nativeQuery.getResultList();
+        session.close();
+        return bookings;
     }
 
     @Override

@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/booking")
 public class BoockingController extends HttpServlet {
@@ -23,7 +24,12 @@ public class BoockingController extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(CutomerController.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        try(PrintWriter printWriter = resp.getWriter()){
+            printWriter.println(jsonb.toJson(boockingService.getAllBoocking()));
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 
     @Override
