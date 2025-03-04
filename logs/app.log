@@ -316,3 +316,9 @@
 
 19:09:28.933 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- id to load is required for loading
 
+19:10:25.241 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:10:25.676 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:10:27.403 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- attempt to create delete event with null entity
+
