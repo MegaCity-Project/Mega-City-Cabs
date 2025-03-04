@@ -28,7 +28,14 @@ public class VehicleController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try(Writer writer = resp.getWriter()){
-            writer.write(jsonb.toJson(vehicleService.getAllVehicle()));
+            String vehicle_id = req.getParameter("vehicle_id");
+
+            if(vehicle_id==null){
+                writer.write(jsonb.toJson(vehicleService.getAllVehicle()));
+            }else{
+                writer.write(jsonb.toJson(vehicleService.findVehicle(vehicle_id)));
+            }
+
         }catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.error(e.getMessage());

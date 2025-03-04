@@ -52,6 +52,9 @@ public class VehicleRepostoryImpl implements VehicleRepostory{
 
     @Override
     public Vehicle findVehicle(String vehicle_id) throws IOException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Vehicle vehicle = session.get(Vehicle.class,vehicle_id);
+        session.close();
+        return vehicle;
     }
 }

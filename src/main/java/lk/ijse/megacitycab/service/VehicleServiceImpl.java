@@ -33,6 +33,6 @@ public class VehicleServiceImpl implements VehicleService{
 
     @Override
     public VehicleDTO findVehicle(String vehicle_id) throws IOException {
-        return null;
+        return map.toVehicleDto(vehicleRepostory.findVehicle(vehicle_id));
     }
 }
