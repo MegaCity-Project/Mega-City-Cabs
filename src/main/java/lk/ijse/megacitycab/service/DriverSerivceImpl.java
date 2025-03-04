@@ -28,7 +28,7 @@ public class DriverSerivceImpl implements DriverService{
 
     @Override
     public void deleteDriver(String driver_id) throws IOException {
-
+        driverRepostory.deleteDriver(driver_id);
     }
 
     @Override

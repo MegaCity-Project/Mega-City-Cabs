@@ -41,7 +41,12 @@ public class DriverRepotoryImpl implements DriverRepostory{
 
     @Override
     public void deleteDriver(String driver_id) throws IOException {
-
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Driver driver = session.get(Driver.class,driver_id);
+        session.remove(driver);
+        transaction.commit();
+        session.close();
     }
 
     @Override

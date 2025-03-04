@@ -59,6 +59,13 @@ public class DriverController extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+        try{
+            String driver_id = req.getParameter("driver_id");
+            driverService.deleteDriver(driver_id);
+            resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 }
