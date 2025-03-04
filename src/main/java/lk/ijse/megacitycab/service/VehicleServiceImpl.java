@@ -23,7 +23,7 @@ public class VehicleServiceImpl implements VehicleService{
 
     @Override
     public void updateVehicle(VehicleDTO vehicle) throws IOException {
-
+        vehicleRepostory.updateVehicle(map.toVehicle(vehicle));
     }
 
     @Override

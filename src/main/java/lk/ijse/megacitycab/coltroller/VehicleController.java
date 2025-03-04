@@ -49,7 +49,14 @@ public class VehicleController extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        try{
+            VehicleDTO vehicle = jsonb.fromJson(req.getReader(), VehicleDTO.class);
+            vehicleService.updateVehicle(vehicle);
+            resp.setStatus(HttpServletResponse.SC_OK);
+        }catch (Exception e){
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

@@ -31,7 +31,11 @@ public class VehicleRepostoryImpl implements VehicleRepostory{
 
     @Override
     public void updateVehicle(Vehicle vehicle) throws IOException {
-
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(vehicle);
+        transaction.commit();
+        session.close();
     }
 
     @Override
