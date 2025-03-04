@@ -1,13 +1,7 @@
 package lk.ijse.megacitycab.util.map;
 
-import lk.ijse.megacitycab.dto.BoockingDTO;
-import lk.ijse.megacitycab.dto.CustomerDTO;
-import lk.ijse.megacitycab.dto.DriverDTO;
-import lk.ijse.megacitycab.dto.VehicleDTO;
-import lk.ijse.megacitycab.entity.Booking;
-import lk.ijse.megacitycab.entity.Customer;
-import lk.ijse.megacitycab.entity.Driver;
-import lk.ijse.megacitycab.entity.Vehicle;
+import lk.ijse.megacitycab.dto.*;
+import lk.ijse.megacitycab.entity.*;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
 import lk.ijse.megacitycab.repostory.impl.CustomerRepotoryImpl;
 import lk.ijse.megacitycab.repostory.DriverRepostory;
@@ -96,6 +90,10 @@ public class Map {
             vehicleDTOS.add(toVehicleDto(vehicle));
         }
         return vehicleDTOS;
+    }
+
+    public User toUser(UserDTO user){
+        return modelMapper.map(user, User.class);
     }
 
 

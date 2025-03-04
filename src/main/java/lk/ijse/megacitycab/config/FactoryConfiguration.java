@@ -21,7 +21,7 @@ public class FactoryConfiguration {
         configuration.addAnnotatedClass(Booking.class);
         configuration.addAnnotatedClass(Driver.class);
         configuration.addAnnotatedClass(Vehicle.class);
-//        configuration.addAnnotatedClass(VehicleDetails.class);
+        configuration.addAnnotatedClass(User.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

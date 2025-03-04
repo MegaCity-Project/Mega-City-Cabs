@@ -392,3 +392,17 @@
 
 20:19:21.352 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 
+20:22:11.659 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:22:12.110 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+21:47:13.215 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+21:47:13.612 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+21:47:15.057 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- Unable to locate persister: lk.ijse.megacitycab.entity.User
+
+21:47:52.167 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+21:47:52.690 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
