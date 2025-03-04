@@ -21,7 +21,6 @@ import java.io.PrintWriter;
 public class DriverController extends HttpServlet {
     private Jsonb jsonb = JsonbBuilder.create();
     private DriverService driverService = new DriverSerivceImpl();
-
     private static final Logger logger = LoggerFactory.getLogger(CutomerController.class);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

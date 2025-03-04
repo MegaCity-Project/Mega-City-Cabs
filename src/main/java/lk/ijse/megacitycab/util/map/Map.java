@@ -3,11 +3,15 @@ package lk.ijse.megacitycab.util.map;
 import lk.ijse.megacitycab.dto.BoockingDTO;
 import lk.ijse.megacitycab.dto.CustomerDTO;
 import lk.ijse.megacitycab.dto.DriverDTO;
+import lk.ijse.megacitycab.dto.VehicleDTO;
 import lk.ijse.megacitycab.entity.Booking;
 import lk.ijse.megacitycab.entity.Customer;
 import lk.ijse.megacitycab.entity.Driver;
+import lk.ijse.megacitycab.entity.Vehicle;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
 import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
+import lk.ijse.megacitycab.repostory.DriverRepostory;
+import lk.ijse.megacitycab.repostory.DriverRepotoryImpl;
 import org.modelmapper.ModelMapper;
 
 import java.io.IOException;
@@ -18,6 +22,8 @@ import java.util.stream.Collectors;
 public class Map {
     private ModelMapper modelMapper = new ModelMapper();
     private CustomerRepotory customerRepotory = new CustomerRepotoryImpl();
+
+    private DriverRepostory driverRepostory = new DriverRepotoryImpl();
     public CustomerDTO toCustomerDto(Customer customer){
         return modelMapper.map(customer, CustomerDTO.class);
     }
@@ -67,6 +73,31 @@ public class Map {
                 .map(driver -> modelMapper.map(driver, DriverDTO.class))
                 .collect(Collectors.toList());
     }
+
+
+    public VehicleDTO toVehicleDto(Vehicle vehicle){
+        String driverId = vehicle.getDriver().getDriverId();
+        VehicleDTO vehicleDTO = modelMapper.map(vehicle,VehicleDTO.class);
+        vehicleDTO.setDriverId(driverId);
+        return vehicleDTO;
+    }
+
+    public Vehicle toVehicle(VehicleDTO vehicle) throws IOException {
+        Driver driver = driverRepostory.findDriver(vehicle.getDriverId());
+        Vehicle vehicles = modelMapper.map(vehicle,Vehicle.class);
+        vehicles.setDriver(driver);
+        return vehicles;
+    }
+
+    public List<VehicleDTO> toVehicleDtoList(List<Vehicle> vehicles){
+        List<VehicleDTO> vehicleDTOS = new ArrayList<>();
+
+        for (Vehicle vehicle : vehicles){
+            vehicleDTOS.add(toVehicleDto(vehicle));
+        }
+        return vehicleDTOS;
+    }
+
 
 
 }
