@@ -1,8 +1,8 @@
-package lk.ijse.megacitycab.repostory;
+package lk.ijse.megacitycab.repostory.impl;
 
 import lk.ijse.megacitycab.config.FactoryConfiguration;
-import lk.ijse.megacitycab.entity.Customer;
-import lk.ijse.megacitycab.entity.Driver;
+import lk.ijse.megacitycab.entity.Vehicle;
+import lk.ijse.megacitycab.repostory.VehicleRepostory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
@@ -10,50 +10,51 @@ import org.hibernate.query.NativeQuery;
 import java.io.IOException;
 import java.util.List;
 
-public class DriverRepotoryImpl implements DriverRepostory{
+public class VehicleRepostoryImpl implements VehicleRepostory {
     @Override
-    public void saveDriver(Driver driver) throws IOException {
+    public void saveVehicle(Vehicle vehicle) throws IOException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.save(driver);
+        session.save(vehicle);
         transaction.commit();
         session.close();
     }
 
     @Override
-    public List<Driver> getAllDriver() throws IOException {
+    public List<Vehicle> getAllVehicle() throws IOException {
         Session session = FactoryConfiguration.getInstance().getSession();
-        NativeQuery nativeQuery = session.createNativeQuery("SELECT * FROM driver");
-        nativeQuery.addEntity(Driver.class);
-        List<Driver> drivers = nativeQuery.getResultList();
+        NativeQuery nativeQuery = session.createNativeQuery("SELECT * FROM vehicle");
+        nativeQuery.addEntity(Vehicle.class);
+        List<Vehicle> resultList = nativeQuery.getResultList();
         session.close();
-        return drivers;
+        return resultList;
     }
 
     @Override
-    public void updateDriver(Driver driver) throws IOException {
+    public void updateVehicle(Vehicle vehicle) throws IOException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.update(driver);
+        session.update(vehicle);
         transaction.commit();
         session.close();
     }
 
     @Override
-    public void deleteDriver(String driver_id) throws IOException {
+    public void deleteVehicle(String vehicle_id) throws IOException {
+        System.out.println(vehicle_id);
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Driver driver = session.get(Driver.class,driver_id);
-        session.remove(driver);
+        Vehicle vehicle = session.get(Vehicle.class,vehicle_id);
+        session.remove(vehicle);
         transaction.commit();
         session.close();
     }
 
     @Override
-    public Driver findDriver(String driver_id) throws IOException {
+    public Vehicle findVehicle(String vehicle_id) throws IOException {
         Session session = FactoryConfiguration.getInstance().getSession();
-        Driver driver = session.get(Driver.class,driver_id);
+        Vehicle vehicle = session.get(Vehicle.class,vehicle_id);
         session.close();
-        return driver;
+        return vehicle;
     }
 }

@@ -1,14 +1,15 @@
-package lk.ijse.megacitycab.service;
+package lk.ijse.megacitycab.service.impl;
 
 import lk.ijse.megacitycab.dto.VehicleDTO;
 import lk.ijse.megacitycab.repostory.VehicleRepostory;
-import lk.ijse.megacitycab.repostory.VehicleRepostoryImpl;
+import lk.ijse.megacitycab.repostory.impl.VehicleRepostoryImpl;
+import lk.ijse.megacitycab.service.VehicleService;
 import lk.ijse.megacitycab.util.map.Map;
 
 import java.io.IOException;
 import java.util.List;
 
-public class VehicleServiceImpl implements VehicleService{
+public class VehicleServiceImpl implements VehicleService {
     private VehicleRepostory vehicleRepostory = new VehicleRepostoryImpl();
     private Map map = new Map();
     @Override

@@ -1,14 +1,15 @@
-package lk.ijse.megacitycab.service;
+package lk.ijse.megacitycab.service.impl;
 
 import lk.ijse.megacitycab.dto.DriverDTO;
 import lk.ijse.megacitycab.repostory.DriverRepostory;
-import lk.ijse.megacitycab.repostory.DriverRepotoryImpl;
+import lk.ijse.megacitycab.repostory.impl.DriverRepotoryImpl;
+import lk.ijse.megacitycab.service.DriverService;
 import lk.ijse.megacitycab.util.map.Map;
 
 import java.io.IOException;
 import java.util.List;
 
-public class DriverSerivceImpl implements DriverService{
+public class DriverSerivceImpl implements DriverService {
     private DriverRepostory driverRepostory = new DriverRepotoryImpl();
     private Map map = new Map();
     @Override

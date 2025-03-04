@@ -14,5 +14,6 @@ public class BoockingDTO {
     private String booking_Id;
     private String date;
     private String registration_number;
+    private String vehicleId;
     private double price;
 }

@@ -2,6 +2,7 @@ package lk.ijse.megacitycab.entity;
 
 import jakarta.persistence.*;
 import lk.ijse.megacitycab.util.enums.FuelType;
+import lk.ijse.megacitycab.util.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,8 @@ public class Vehicle {
     private String licanePlateNumber;
     @Enumerated(EnumType.STRING)
     private FuelType fuelType;
+    @Enumerated(EnumType.STRING)
+    private Status status;
     @OneToMany(mappedBy = "vehicle")
-    private List<VehicleDetails> vehicleDetails;
+    private List<Booking> bookings;
 }

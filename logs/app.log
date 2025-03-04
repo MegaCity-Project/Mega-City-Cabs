@@ -322,3 +322,73 @@
 
 19:10:27.403 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- attempt to create delete event with null entity
 
+19:19:50.152 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:19:50.616 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:19:52.369 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.entity.Vehicle.getDriver()" because "vehicle" is null
+
+19:19:57.876 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.entity.Vehicle.getDriver()" because "vehicle" is null
+
+19:20:01.293 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- Cannot invoke "lk.ijse.megacitycab.entity.Vehicle.getDriver()" because "vehicle" is null
+
+19:58:07.593 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:58:08.084 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:58:08.419 [http-nio-8080-exec-2] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Vehicle.vehicleDetails' targets the type 'lk.ijse.megacitycab.entity.VehicleDetails' which is not an '@Entity' type
+
+19:58:14.034 [http-nio-8080-exec-3] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:58:14.054 [http-nio-8080-exec-3] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+19:58:14.084 [http-nio-8080-exec-3] ERROR l.i.m.coltroller.CutomerController -- Association 'lk.ijse.megacitycab.entity.Vehicle.vehicleDetails' targets the type 'lk.ijse.megacitycab.entity.VehicleDetails' which is not an '@Entity' type
+
+19:58:44.340 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+19:58:44.848 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:01:49.744 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:01:50.246 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:03:28.406 [http-nio-8080-exec-9] ERROR l.i.m.coltroller.CutomerController -- Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [lk.ijse.megacitycab.entity.Booking#B12345]
+
+20:03:48.725 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1452, SQLState: 23000
+
+20:03:48.725 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Cannot add or update a child row: a foreign key constraint fails (`mega-city`.`booking`, CONSTRAINT `FKp3csr20sgy9fmxrgcrych6kw4` FOREIGN KEY (`vehicle_vehicleId`) REFERENCES `vehicle` (`vehicleId`))
+
+20:03:48.729 [http-nio-8080-exec-1] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`mega-city`.`booking`, CONSTRAINT `FKp3csr20sgy9fmxrgcrych6kw4` FOREIGN KEY (`vehicle_vehicleId`) REFERENCES `vehicle` (`vehicleId`))] [update Booking set customer_registration_number=?,date=?,price=?,vehicle_vehicleId=? where booking_Id=?]
+
+20:10:58.557 [http-nio-8080-exec-1] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:10:59.012 [http-nio-8080-exec-1] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:11:44.386 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:11:44.905 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:12:36.478 [http-nio-8080-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper -- SQL Error: 1452, SQLState: 23000
+
+20:12:36.478 [http-nio-8080-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper -- Cannot add or update a child row: a foreign key constraint fails (`mega-city`.`booking`, CONSTRAINT `FKp3csr20sgy9fmxrgcrych6kw4` FOREIGN KEY (`vehicle_vehicleId`) REFERENCES `vehicle` (`vehicleId`))
+
+20:12:36.486 [http-nio-8080-exec-6] ERROR l.i.m.coltroller.CutomerController -- could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`mega-city`.`booking`, CONSTRAINT `FKp3csr20sgy9fmxrgcrych6kw4` FOREIGN KEY (`vehicle_vehicleId`) REFERENCES `vehicle` (`vehicleId`))] [update Booking set customer_registration_number=?,date=?,price=?,vehicle_vehicleId=? where booking_Id=?]
+
+20:16:05.494 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:16:05.983 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:16:14.959 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- Argument 'lk.ijse.megacitycab.entity.Vehicle@bc44d6f' could not be converted to the identifier type of entity 'lk.ijse.megacitycab.entity.Vehicle' [Could not convert 'lk.ijse.megacitycab.entity.Vehicle' to 'java.lang.String' using 'org.hibernate.type.descriptor.java.StringJavaType' to wrap]
+
+20:16:31.746 [http-nio-8080-exec-7] ERROR l.i.m.coltroller.CutomerController -- Argument 'lk.ijse.megacitycab.entity.Vehicle@76747c17' could not be converted to the identifier type of entity 'lk.ijse.megacitycab.entity.Vehicle' [Could not convert 'lk.ijse.megacitycab.entity.Vehicle' to 'java.lang.String' using 'org.hibernate.type.descriptor.java.StringJavaType' to wrap]
+
+20:17:19.087 [http-nio-8080-exec-4] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:17:19.341 [http-nio-8080-exec-4] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+
+20:17:20.865 [http-nio-8080-exec-4] ERROR l.i.m.coltroller.CutomerController -- Argument 'lk.ijse.megacitycab.entity.Vehicle@7eb674ad' could not be converted to the identifier type of entity 'lk.ijse.megacitycab.entity.Vehicle' [Could not convert 'lk.ijse.megacitycab.entity.Vehicle' to 'java.lang.String' using 'org.hibernate.type.descriptor.java.StringJavaType' to wrap]
+
+20:19:20.812 [http-nio-8080-exec-2] WARN  o.hibernate.orm.connections.pooling -- HHH10001002: Using built-in connection pool (not intended for production use)
+
+20:19:21.352 [http-nio-8080-exec-2] WARN  org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+

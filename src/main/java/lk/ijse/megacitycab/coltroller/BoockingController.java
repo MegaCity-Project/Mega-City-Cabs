@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lk.ijse.megacitycab.dto.BoockingDTO;
 import lk.ijse.megacitycab.service.BoockingService;
-import lk.ijse.megacitycab.service.BoockingServiceImpl;
+import lk.ijse.megacitycab.service.impl.BoockingServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

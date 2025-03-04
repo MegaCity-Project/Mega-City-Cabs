@@ -1,14 +1,15 @@
-package lk.ijse.megacitycab.service;
+package lk.ijse.megacitycab.service.impl;
 
 import lk.ijse.megacitycab.dto.CustomerDTO;
+import lk.ijse.megacitycab.service.CustomerService;
 import lk.ijse.megacitycab.util.map.Map;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
-import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
+import lk.ijse.megacitycab.repostory.impl.CustomerRepotoryImpl;
 
 import java.io.IOException;
 import java.util.List;
 
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
     private Map map = new Map();
     private CustomerRepotory customerRepotory = new CustomerRepotoryImpl();
 

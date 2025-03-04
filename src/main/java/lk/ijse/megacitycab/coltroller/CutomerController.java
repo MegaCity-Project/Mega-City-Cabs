@@ -7,11 +7,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.megacitycab.config.FactoryConfiguration;
 import lk.ijse.megacitycab.dto.CustomerDTO;
-import lk.ijse.megacitycab.entity.Customer;
 import lk.ijse.megacitycab.service.CustomerService;
-import lk.ijse.megacitycab.service.CustomerServiceImpl;
+import lk.ijse.megacitycab.service.impl.CustomerServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

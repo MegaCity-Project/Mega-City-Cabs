@@ -9,9 +9,9 @@ import lk.ijse.megacitycab.entity.Customer;
 import lk.ijse.megacitycab.entity.Driver;
 import lk.ijse.megacitycab.entity.Vehicle;
 import lk.ijse.megacitycab.repostory.CustomerRepotory;
-import lk.ijse.megacitycab.repostory.CustomerRepotoryImpl;
+import lk.ijse.megacitycab.repostory.impl.CustomerRepotoryImpl;
 import lk.ijse.megacitycab.repostory.DriverRepostory;
-import lk.ijse.megacitycab.repostory.DriverRepotoryImpl;
+import lk.ijse.megacitycab.repostory.impl.DriverRepotoryImpl;
 import org.modelmapper.ModelMapper;
 
 import java.io.IOException;

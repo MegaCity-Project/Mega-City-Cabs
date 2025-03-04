@@ -1,14 +1,15 @@
-package lk.ijse.megacitycab.service;
+package lk.ijse.megacitycab.service.impl;
 
 import lk.ijse.megacitycab.dto.BoockingDTO;
 import lk.ijse.megacitycab.repostory.BoockingRepostory;
-import lk.ijse.megacitycab.repostory.BoockingRepostoryImpl;
+import lk.ijse.megacitycab.repostory.impl.BoockingRepostoryImpl;
+import lk.ijse.megacitycab.service.BoockingService;
 import lk.ijse.megacitycab.util.map.Map;
 
 import java.io.IOException;
 import java.util.List;
 
-public class BoockingServiceImpl implements BoockingService{
+public class BoockingServiceImpl implements BoockingService {
 
     private BoockingRepostory boockingRepostory = new BoockingRepostoryImpl();
     private Map map = new Map();

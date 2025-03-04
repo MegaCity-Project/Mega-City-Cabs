@@ -1,6 +1,7 @@
 package lk.ijse.megacitycab.dto;
 
 import lk.ijse.megacitycab.util.enums.FuelType;
+import lk.ijse.megacitycab.util.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,5 @@ public class VehicleDTO {
     private double pricePreMilage;
     private String licanePlateNumber;
     private FuelType fuelType;
+    private Status status;
 }

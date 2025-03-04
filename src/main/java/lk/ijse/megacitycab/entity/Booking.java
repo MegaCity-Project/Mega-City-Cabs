@@ -20,9 +20,8 @@ public class Booking {
     private String booking_Id;
     private String date;
     @ManyToOne
-    @JoinColumn(name = "registration_number",nullable = false)
     private Customer customer;
-    @OneToMany(mappedBy = "booking")
-    private List<VehicleDetails> vehicleDetails;
+    @ManyToOne
+    private Vehicle vehicle;
     private double price;
 }
